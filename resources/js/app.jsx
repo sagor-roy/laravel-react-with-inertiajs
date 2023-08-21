@@ -6,7 +6,7 @@ import { InertiaProgress } from '@inertiajs/progress'
 //import 'bootstrap/dist/css/bootstrap.min.css'
 
 InertiaProgress.init({
-    delay: 250,
+    delay: 500,
     color: 'red',
     includeCSS: true,
     showSpinner: true,

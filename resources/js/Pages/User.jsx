@@ -1,5 +1,5 @@
 
-function User() {
+function User({ user }) {
     return (
         <div className="row justify-content-center">
             <div className="col-md-8">
@@ -18,12 +18,16 @@ function User() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
+                                {user.data.map((item, index) => (
+                                    <tr key={index}>
+                                        <th>{index}</th>
+                                        <td>{item.name}</td>
+                                        <td>{item.email}</td>
+                                        <td>
+                                            <a href="#" className="btn btn-sm btn-primary">Edit</a>
+                                        </td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
